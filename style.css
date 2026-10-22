@@ -37,3 +37,43 @@ ul.ticks{padding-left:1.2rem}ul.ticks li{margin:.35rem 0}
 footer{background:var(--ink);color:var(--cream);padding:2.2rem 0;font-size:.95rem}
 footer a{color:var(--cream)}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
 :focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+/* ===== Canva-style restyle ===== */
+:root{--peach:#faede5;--rust:#9f4006;--cream:#faede5;--sand:#f4e2d6}
+body{font-family:Inter,system-ui,sans-serif;background:var(--peach)}
+h1,h2,.display{font-family:"DM Serif Display",Georgia,serif;font-weight:400;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.05}h2{font-size:clamp(2rem,5vw,3.4rem)}
+.eyebrow{color:var(--rust)}
+header{background:rgba(250,237,229,.92);backdrop-filter:blur(8px);color:var(--ink);border-bottom:1px solid #ecd6c8}
+.brand,nav a{color:var(--ink)}nav a{font-weight:600}.menu-btn{color:var(--ink);border-color:var(--ink)}
+.btn{background:var(--rust);color:#fff}.btn:hover{background:#7f3305}.btn.ghost{color:var(--ink);background:transparent}
+.center{text-align:center}
+.hero.canva{min-height:calc(100vh - 64px);display:flex;align-items:center;background:var(--peach);padding:3rem 0;position:relative}
+.hero.canva .wrap{display:block;max-width:900px}
+.biglogo{width:min(240px,50vw);margin:0 auto 1rem;border-radius:50%}
+.ul{background:url(img/brush.png) no-repeat center bottom/100% .32em;padding-bottom:.18em}
+.marker{font-family:"Permanent Marker",cursive;color:var(--rust);transform:rotate(-8deg);font-size:1.4rem;margin:-.4rem 0 0 -55%;}
+.tag{font-size:clamp(1.1rem,2.4vw,1.5rem)}
+.ringbtn{display:inline-block;padding:1.2rem 2.4rem;font:700 1.3rem Georgia,serif;text-transform:uppercase;color:var(--ink);text-decoration:none;background:url(img/ring.svg) no-repeat center/100% 100%;transition:transform .3s}
+.ringbtn:hover{transform:rotate(-3deg) scale(1.05)}
+.hero.full{min-height:88vh;display:flex;align-items:center;color:#fff;background:#2b1a12 var(--bg) center/cover no-repeat;position:relative;isolation:isolate}
+.hero.full::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(43,26,18,.88) 30%,rgba(43,26,18,.35));z-index:-1}
+.hero.full .eyebrow{color:#f3b27a}.hero.full a:not(.btn){color:#fff}.hero.full .btn.ghost{color:#fff;border-color:#fff}
+.hero.full .shot{transform:rotate(2deg)}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding:0;background:var(--peach)}
+.split-img{background:var(--bg) center/cover}.split-txt{align-self:center;padding:3rem clamp(1.2rem,5vw,5rem);font-size:1.1rem}
+@media(max-width:760px){.split{grid-template-columns:1fr;min-height:0}.split-img{min-height:70vh}.marker{margin-left:-30%}}
+.band{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#222 var(--bg) center/cover no-repeat;padding:0}
+.bandtxt{font-size:clamp(2.2rem,7vw,5.5rem);color:#fff;text-align:center;padding:.3em .8em;background:#111;transform:rotate(-2deg);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.band.yellow .bandtxt{background:#f6d23a;color:var(--ink)}.band.dark .bandtxt{background:rgba(20,12,8,.82)}
+.bandtxt small{display:block;font:600 .3em Inter,sans-serif;letter-spacing:.04em}
+@media(min-width:900px){.parallax{background-attachment:fixed}}
+@supports (-webkit-touch-callout:none){.parallax{background-attachment:scroll}}
+section.alt{background:var(--sand)}
+.card{border-radius:4px;box-shadow:0 8px 22px rgba(43,26,18,.08);transition:transform .4s}.card:hover{transform:translateY(-6px) rotate(-.5deg)}
+.work figure{border-radius:4px;transition:transform .4s}.work figure:hover{transform:scale(1.02)}
+footer{background:var(--rust)}
+[data-reveal]{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].in{opacity:1;transform:none}
+.js-off [data-reveal]{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;transition:none}.parallax{background-attachment:scroll!important}.card,.work figure,.ringbtn{transition:none}}
