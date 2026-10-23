@@ -103,3 +103,8 @@ footer{background:var(--rust)}
 .kcs-nav img{width:32px;height:32px;border-radius:50%;display:block;transition:transform .2s}
 .kcs-nav a:hover img,.kcs-nav a[aria-current] img{transform:scale(1.12)}
 @media (max-width:900px){.kcs-nav{margin-left:0}}
+/* KCS page extras */
+.card .big{font-size:2rem;font-weight:700;margin:.2em 0}
+.fb-btn{display:inline-flex;align-items:center;gap:.6em;background:#1877F2;border-color:#1877F2;color:#fff;font-size:1.1rem}
+.fb-btn:hover{background:#0f5fd1;border-color:#0f5fd1;color:#fff}
+.fb-ico{flex:none}
