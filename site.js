@@ -8,10 +8,3 @@ els.forEach(e=>io.observe(e));
 const drift=[...document.querySelectorAll('.biglogo,.bandtxt')];let tk=0;
 addEventListener('scroll',()=>{if(tk)return;tk=requestAnimationFrame(()=>{tk=0;const vh=innerHeight;drift.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=(r.top+r.height/2-vh/2)/vh;el.style.translate=`0 ${p*-60}px`})})},{passive:true});
 })();
-/* Currency toggle: values hard-coded in data-* attributes; USD shown without JS */
-(()=>{const K='co-currency',ok=['usd','gbp','aed','eur'];
-function set(c){if(!ok.includes(c))c='usd';document.querySelectorAll('.price').forEach(p=>{p.textContent=p.dataset[c]});
-document.querySelectorAll('.cur button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cur===c))}
-let c='usd';try{c=localStorage.getItem(K)||'usd'}catch(e){}set(c);
-document.addEventListener('click',e=>{const b=e.target.closest('.cur button');if(!b)return;try{localStorage.setItem(K,b.dataset.cur)}catch(e){}set(b.dataset.cur)});
-addEventListener('storage',e=>{if(e.key===K)set(e.newValue)});})();
