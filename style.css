@@ -108,3 +108,8 @@ footer{background:var(--rust)}
 .fb-btn{display:inline-flex;align-items:center;gap:.6em;background:#1877F2;border-color:#1877F2;color:#fff;font-size:1.1rem}
 .fb-btn:hover{background:#0f5fd1;border-color:#0f5fd1;color:#fff}
 .fb-ico{flex:none}
+.ai-split{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+.ai-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.ai-fig{margin:0}.ai-fig img{width:100%;height:auto;border-radius:12px;display:block}
+@media (min-width:900px){.ai-split{grid-template-columns:3fr 2fr}.ai-grid{grid-template-columns:1fr 1fr}}
+.fb-cta .btn{margin:6px}
