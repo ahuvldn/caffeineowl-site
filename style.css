@@ -97,3 +97,9 @@ footer{background:var(--rust)}
 .rates th,.rates td{padding:.8rem 1rem;border-bottom:1px solid var(--line);text-align:left}.rates td{text-align:right;white-space:nowrap;font-weight:600}
 .rates th{font-weight:400}
 @media(max-width:760px){.curbar{top:56px}.curbar .wrap{justify-content:center}.plan.pop{transform:none}.rates th,.rates td{padding:.7rem .6rem;font-size:.95rem}}
+/* KCS Facebook icon in nav */
+.kcs-nav{margin-left:auto}
+.kcs-nav a{display:flex;align-items:center;padding:4px}
+.kcs-nav img{width:32px;height:32px;border-radius:50%;display:block;transition:transform .2s}
+.kcs-nav a:hover img,.kcs-nav a[aria-current] img{transform:scale(1.12)}
+@media (max-width:900px){.kcs-nav{margin-left:0}}
